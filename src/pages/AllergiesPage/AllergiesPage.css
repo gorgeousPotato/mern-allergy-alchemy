@@ -1,0 +1,31 @@
+.AllergiesPage {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.AllergiesPage .allergen {
+  background-color: lavender;
+  border-radius: 100px;
+  width: 20vw;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+}
+
+.AllergiesPage .allergen button {
+  border: none;
+  background-color: white;
+  border-radius: 100px;
+}
+
+.AllergiesPage .flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+

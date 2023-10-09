@@ -1,0 +1,9 @@
+.SignUpForm form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.SignUpForm button {
+  grid-column: 1/3;
+}

@@ -1,0 +1,9 @@
+.LoginForm form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.LoginForm button {
+  grid-column: 1/3;
+}

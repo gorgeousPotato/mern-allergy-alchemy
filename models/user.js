@@ -4,6 +4,15 @@ const bcrypt = require('bcrypt');
 
 const SALT_ROUNDS = 6;
 
+const allergySchema = new Schema({
+  ingredient: {type: String},
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
+})
+
 const userSchema = new Schema({
 name: {type: String, required: true},
 email: {
@@ -17,7 +26,9 @@ password: {
   trim: true,
   minLength: 3,
   required: true,
-}}, {
+},
+allergies: [allergySchema]
+}, {
   timestamps: true,
   // Even though it's hashed - don't serialize the password
   toJSON: {

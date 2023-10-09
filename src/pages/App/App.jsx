@@ -4,8 +4,8 @@ import { Routes, Route, Navigate } from "react-router-dom"
 import { getUser } from "../../utilities/users-service"
 import AuthPage from "../AuthPage/AuthPage";
 import NavBar from "../../components/NavBar/NavBar";
-import NewOrderPage from "../NewOrderPage/NewOrderPage";
 import OrderHistoryPage from "../OrderHistoryPage/OrderHistoryPage"
+import AllergiesPage from '../AllergiesPage/AllergiesPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -15,9 +15,9 @@ export default function App() {
       <>
         <NavBar user={user} setUser={setUser}/>
         <Routes>
-          <Route path="/orders/new" element={<NewOrderPage />}/>
+          <Route path="/allergies" element={<AllergiesPage user={user}/>}/>
           <Route path="/orders" element={<OrderHistoryPage />}/>
-          <Route path="/*" element={<Navigate to="/orders/new" />} />
+          <Route path="/*" element={<Navigate to="/orders" />} />
         </Routes>
       </>
           
