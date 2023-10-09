@@ -7,3 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.flex-2-col {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+

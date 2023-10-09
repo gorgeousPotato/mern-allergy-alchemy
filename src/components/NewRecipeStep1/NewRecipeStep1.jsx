@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import * as recipesAPI from "../../utilities/recipes-api"
 import "./NewRecipeStep1.css"
 
-export default function NewRecipeStep1({ setStep, user }) {
+export default function NewRecipeStep1({ setStep, user, setRecipe }) {
   const [categories, setCategories] = useState([]);
   const [newRecipe, setNewRecipe] = useState({
     title: '',
@@ -23,7 +23,7 @@ export default function NewRecipeStep1({ setStep, user }) {
     getCategories();
   }, []);
 
-  const categoryOptions = categories.map((cat, idx) => <option value={cat.title}>{cat.title}</option>)
+  const categoryOptions = categories.map((cat, idx) => <option value={cat._id}>{cat.title}</option>)
 
   function handleChange(evt) {
     setNewRecipe({...newRecipe, [evt.target.name]: evt.target.value})
@@ -34,6 +34,7 @@ export default function NewRecipeStep1({ setStep, user }) {
     const newRecipeData = {...newRecipe};
     newRecipeData.user = user;
     const recipe = await recipesAPI.addRecipe(newRecipeData);
+    setRecipe(recipe);
     setStep('step2');
   }
   return (
