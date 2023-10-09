@@ -1,0 +1,8 @@
+.NewRecipeStep1 form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 50%;
+  gap: 1rem;
+  text-align: left;
+  margin: 0 auto;
+}

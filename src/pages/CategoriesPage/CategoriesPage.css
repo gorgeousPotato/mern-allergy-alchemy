@@ -1,0 +1,19 @@
+.CategoriesPage {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.CategoriesPage .category {
+  height: 20vh;
+}
+
+.CategoriesPage .text-container {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  color: #fff; /* Text color */
+  padding: 10px; /* Add padding for spacing */
+}
+
+.text-container h3 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}

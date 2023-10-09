@@ -6,6 +6,14 @@ const categorySchema = new Schema({
     type: String,
     required: true,
   },
+  img: {
+    type: String,
+  }
 })
+
+// categorySchema.methods.getAll = async function() {
+//   const categories = await this.find({});
+//   return categories;
+// }
 
 module.exports = mongoose.model('Category', categorySchema);
