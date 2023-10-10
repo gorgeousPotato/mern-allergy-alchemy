@@ -71,14 +71,17 @@ const recipeSchema = new Schema({
   prepTime: {
     type: Number,
     required: true,
+    default: 1,
   },
   cookTime: {
     type: Number,
     required: true,
+    default: 1,
   },
   difficulty: {
     type: Number,
     required: true,
+    default: 1,
   },
   user: {
     type: Schema.Types.ObjectId,
