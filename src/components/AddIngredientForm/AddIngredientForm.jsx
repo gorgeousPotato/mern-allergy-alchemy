@@ -23,6 +23,11 @@ export default function AddIngredientForm({recipe}) {
     newIngredientData.recipe = recipe;
     const newIndredients = await ingredientsAPI.addIngredient(recipe._id, newIngredientData);
     setIngredients(newIndredients);
+    setNewIngredient({
+      name: '',
+      qty: '',
+      measure: '',
+    })
   }
 
   return(

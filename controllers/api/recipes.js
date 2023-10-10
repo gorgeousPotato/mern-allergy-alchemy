@@ -4,7 +4,7 @@ const Recipe = require('../../models/recipe');
 module.exports = {
   new: newRecipe,
   create,
-  // createIngredient,
+  show,
 }
 
 async function newRecipe(req,res) {
@@ -20,14 +20,7 @@ async function create(req,res) {
   res.json(recipe);
 }
 
-// async function createIngredient(req,res) {
-//   console.log(req.body);
-//   const recipe = await Recipe.findById(req.params.id);
-//   recipe.ingredients.push(req.body)
-//   try {
-//     await recipe.save();
-//   } catch (err) {
-//     console.log(err);
-//   };
-//   res.json(recipe.ingredients)
-// }
+async function show(req,res) {
+  const recipe = await Recipe.findById(req.params.id).populate('user', 'name');
+  res.json(recipe);
+}

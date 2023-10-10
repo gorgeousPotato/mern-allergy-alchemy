@@ -9,6 +9,6 @@ export function addRecipe(newRecipe) {
   return sendRequest(BASE_URL, 'POST', newRecipe);
 }
 
-// export function addIngredient(newIngredient, recipeId) {
-//   return sendRequest(`${BASE_URL}/${recipeId}/ingredients`, 'POST', newIngredient);
-// }
+export function getRecipe(recipeId) {
+  return sendRequest(`${BASE_URL}/${recipeId}`);
+}

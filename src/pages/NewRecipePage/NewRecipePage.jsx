@@ -4,7 +4,7 @@ import NewRecipeStep2 from "../../components/NewRecipeStep2/NewRecipeStep2";
 
 export default function NewRecipePage({user}) {
   const [step, setStep] = useState('step1');
-  const [recipe, setRecipe] = useState(null);
+  const [recipe, setRecipe] = useState('');
 
   return (
     <div className="NewRecipePage">

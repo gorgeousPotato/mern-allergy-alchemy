@@ -1,17 +1,22 @@
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom";
 import AddStepForm from "../AddStepForm/AddStepForm";
 import AddIngredientForm from "../AddIngredientForm/AddIngredientForm";
-import * as recipesAPI from "../../utilities/recipes-api"
+import AddImgForm from "../AddImgForm/AddImgForm";
+import "./NewRecipeStep2.css"
 
 export default function newRecipeStep2({user, setStep, recipe}) {
   
   return(
     <div className="NewRecipeStep2">
-      <h1>New recipe step2</h1>
-      <div class="flex-2-col ">
+      <div class="flex-col">
         <AddIngredientForm recipe={recipe}/>
         <AddStepForm recipe={recipe}/>
+        <AddImgForm recipe={recipe} />
       </div>
+      <Link to={`/recipes/${recipe._id}`}>
+        <button>Save Recipe</button>
+      </Link>
     </div>
   );
 }

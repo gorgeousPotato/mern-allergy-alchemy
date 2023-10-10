@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
+const multer = require('multer');
+const fs = require("fs");
 
 require('dotenv').config();
 //connect to the database
@@ -28,6 +30,8 @@ app.use('/api/categories', require('./routes/api/categories'));
 app.use('/api/recipes', require('./routes/api/recipes'));
 app.use('/api/recipes', require('./routes/api/ingredients'));
 app.use('/api/recipes', require('./routes/api/steps'));
+app.use('/api/recipes', require('./routes/api/images'));
+app.use('/api/recipes', require('./routes/api/nutrition'));
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX/API requests

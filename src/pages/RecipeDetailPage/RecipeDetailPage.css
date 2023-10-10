@@ -1,0 +1,40 @@
+.RecipeDetailPage .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 6fr 2fr;
+  gap: .5rem;
+}
+
+.card {
+  border: 1px solid lavender;
+  border-radius: 1rem;
+}
+
+.main {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.nutrition {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.free {
+  grid-column: 2/4;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ingredients {
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+
+.method {
+  grid-column: 3/4;
+  grid-row: 1/3;
+}
+

@@ -17,10 +17,13 @@ export default function AddStepForm({recipe}) {
 
   async function handleAddStep(evt) {
     evt.preventDefault();
-    const newStepData = {...newSteps};
+    const newStepData = {...newStep};
     newStepData.recipe = recipe;
     const newSteps = await stepsAPI.addStep(recipe._id, newStepData);
     setSteps(newSteps);
+    setNewStep({
+      name: '',
+    });
   }
 
   return(

@@ -1,10 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const stepsCtrl = require('../../controllers/api/steps');
+const nutritionCtrl = require('../../controllers/api/nutrition');
 const ensureLoggedIn = require('../../config/ensureLoggedIn')
 
 
-//POST /api/recipes/:id/ingredients
-router.post('/:id/steps', stepsCtrl.create);
+
+//GET /api/recipes/:id/nutrition
+router.post('/:id/nutrition', nutritionCtrl.show)
+
+
 
 module.exports = router;
