@@ -1,24 +1,46 @@
 const Recipe = require('../../models/recipe');
-const fs = require("fs");
-const path = require("path");
+const uploadImage = require('../../config/upload-image')
 
 module.exports = {
-  create,
+  upload,
+  index,
 }
 
-async function create(req,res) {
-  const recipe = await Recipe.findById(req.params.id);
-  console.log('Received a request to upload an image');
-  console.log('req.file:', req.file); 
-  req.body.img = {
-    data: fs.readFileSync(path.join("uploads/" + req.file.filename)),
-  };
-  console.log(req.body);
-  recipe.img = req.body.img;
+async function index(req,res) {
+  const rec = await Recipe.findById(req.params.id);
+  const img = rec.img;
+  res.json(img);
+}
+
+// async function upload(req,res) {
+//   const recipe = await Recipe.findById(req.params.id);
+//   console.log('Received a request to upload an image');
+//   console.log('req.file:', req.file); 
+//   req.body.img = {
+//     data: fs.readFileSync(path.join("uploads/" + req.file.filename)),
+//   };
+//   console.log(req.body);
+//   recipe.img = req.body.img;
+//   try {
+//     await recipe.save();
+//   } catch (err) {
+//     console.log(err);
+//   };
+//   res.json("uploaded")
+// }
+async function upload(req,res) {
   try {
-    await recipe.save();
+    if (req.file) {
+      console.log(req.file);
+      const imgUrl = await uploadImage(req.file);
+      const recipe = await Recipe.findById(req.params.id);
+      recipe.img = imgUrl;
+      await recipe.save()
+      res.json(recipe.img);
+    } else {
+      throw new Error('Must select a file');
+    }
   } catch (err) {
-    console.log(err);
-  };
-  res.json("uploaded")
+    res.status(400).json(err.message);
+  }
 }
