@@ -2,29 +2,33 @@
   display: flex;
   flex-direction: column;
   width: 50%;
-  margin: 0 auto;
+  text-align: left;
 }
 
 .AllergiesPage .allergen {
-  background-color: lavender;
+  background-color: var(--tertiary);
+  color: white;
   border-radius: 100px;
   width: 20vw;
-  margin: 1rem 0;
+  margin: 1rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 3rem;
+  padding: 0 1rem 0 3rem;
 }
 
 .AllergiesPage .allergen button {
   border: none;
   background-color: white;
+  margin-left: 3vw;
   border-radius: 100px;
 }
 
-.AllergiesPage .flex-column {
+.AllergiesPage .allergens-container {
   display: flex;
-  flex-direction: column;
+  flex-direction:row;
+  flex-wrap: wrap;
+  margin-top: 2rem;
   justify-content: flex-start;
   align-items: center;
 }

@@ -1,0 +1,20 @@
+.NewAllergyForm input{
+  padding: .3rem .3rem;
+  border: 1px solid var(--text-tertiary);
+  border-radius: 100px;
+  margin-right: .5rem;
+}
+
+
+.NewAllergyForm button{
+  padding: .3rem 1rem;
+  border: none;
+  border-radius: 100px;
+  background-color: var(--blue);
+  color: var(--text-primary)
+}
+
+.NewAllergyForm button:hover{
+  color: white;
+  background-color: var(--tertiary);
+}

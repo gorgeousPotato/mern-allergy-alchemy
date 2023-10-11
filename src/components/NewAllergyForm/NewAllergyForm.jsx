@@ -18,7 +18,7 @@ export default function NewAllergyForm({user, handleAdd}) {
     <div className="NewAllergyForm">
       <div className="form-container">
         <form autoComplete="off" onSubmit={handleSubmit}>
-          <input name="ingredient" value={newAllergy.ingredient} onChange={handleChange} required></input>          
+          <input name="ingredient" size="20" value={newAllergy.ingredient} onChange={handleChange} required></input>          
           <button type="submit">Add</button>
         </form>
       </div>

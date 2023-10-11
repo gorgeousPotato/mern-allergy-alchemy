@@ -29,7 +29,7 @@ export default function App() {
           <Route path="/recipes/:id" element={<RecipeDetailPage user={user}/>}/>
           <Route path="/recipes/:id/nutrition" element={<NutritionDetailPage user={user}/>}/>
 
-          <Route path="/*" element={<Navigate to="/orders" />} />
+          <Route path="/*" element={<Navigate to="/recipes" />} />
         </Routes>
       </>
           

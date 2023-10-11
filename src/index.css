@@ -1,10 +1,24 @@
+:root {
+  --primary: #FDF4F5;
+  --secondary: #E8A0BF;
+  --tertiary: #BA90C6;
+  --blue: #C0DBEA;
+  --text-primary: #2a1430;
+  --text-secondary: #534856;
+  --text-tertiary: #d3c7d7;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  margin: 1vh 5vw;
+  font-family: 'Poppins';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--primary);
+  color: var(--text-primary);
 }
 
 .flex-2-col {
@@ -12,4 +26,6 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+
+
 

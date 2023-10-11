@@ -37,7 +37,7 @@ export default function AllergiesPage({user}) {
       <h1>Allergy Profile</h1>
       <h3>List the ingredients you are allergic to</h3>
       <NewAllergyForm user={user} handleAdd={handleAdd} />
-      <div className="flex-column">
+      <div className="allergens-container">
         {allergiesList}
       </div>
     </div>

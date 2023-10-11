@@ -37,7 +37,7 @@ export default function RecipeDetailPage({user}) {
     <div className="RecipeDetailPage">
       <h1>{rec.title}</h1>
       <div className="container">
-        <div className="main card">
+        <div className="main card" style={{backgroundImage: `url(${rec.img})`, backgroundSize: 'cover', backgroundPosition: 'center center'}}>
           <div>
             <h5>Prep time: {rec.prepTime} min</h5>
             <h5>Cook time: {rec.cookTime} min</h5>

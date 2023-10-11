@@ -1,0 +1,32 @@
+.NavBar .navbar-container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.NavBar .navbar-container h1{
+  font-family: Lacquer;
+  margin-right: auto;
+} 
+
+.logo {
+  font-family: Lacquer;
+}
+
+.NavBar h3 {
+  text-align: left;
+  color: var(--text-secondary)
+}
+
+.NavBar a:link,
+.NavBar a:visited {
+  text-decoration: none;
+  color: var(--text-secondary);
+  margin: 0 1rem;
+}
+
+.NavBar a:hover {
+  text-decoration: underline;
+  color: var(--secondary);
+}
+
