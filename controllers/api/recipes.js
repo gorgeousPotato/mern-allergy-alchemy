@@ -1,10 +1,27 @@
 const Category = require('../../models/category');
 const Recipe = require('../../models/recipe');
+const User = require('../../models/user')
 
 module.exports = {
   new: newRecipe,
   create,
   show,
+  index,
+}
+
+async function index(req, res) {
+  const allRecipes = await Recipe.find({}).populate('ingredients');
+  const ing = allRecipes.map(rec => rec.ingredients);
+  const user = await User.findById(req.user._id);
+  const allergies = user.allergies;
+  const allergiesArr = allergies.map(aller => aller.ingredient);
+  recipesArr = [];
+  allRecipes.map(rec => {
+    let isOkay = true;
+    rec.ingredients.map(ing => {if (allergiesArr.includes(ing.name)) isOkay=false} );
+    if (isOkay) recipesArr.push(rec)
+  })
+res.json(recipesArr);
 }
 
 async function newRecipe(req,res) {

@@ -12,3 +12,7 @@ export function addRecipe(newRecipe) {
 export function getRecipe(recipeId) {
   return sendRequest(`${BASE_URL}/${recipeId}`);
 }
+
+export function getRecipesAllergy() {
+  return sendRequest(BASE_URL);
+}
