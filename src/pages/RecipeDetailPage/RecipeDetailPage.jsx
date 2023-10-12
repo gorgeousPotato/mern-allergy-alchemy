@@ -33,9 +33,14 @@ export default function RecipeDetailPage({user}) {
 
   const ingredientsList = rec.ingredients.map((ing, idx) => <li>{ing.name} - {ing.qty} {ing.measure}</li>)
   const stepsList = rec.steps.map((step, idx) => <li>{step.name}</li>)
+
+  function handleEdit(id) {
+
+  }
   return (
     <div className="RecipeDetailPage">
       <h1>{rec.title}</h1>
+      {rec.user._id === user._id && <Link to={`/recipes/${rec._id}/edit`}>Edit</Link>}
       <div className="container">
         <div className="main card" style={{backgroundImage: `url(${rec.img})`, backgroundSize: 'cover', backgroundPosition: 'center center'}}>
           <div>

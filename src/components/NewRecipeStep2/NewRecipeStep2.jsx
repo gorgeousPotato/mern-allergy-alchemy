@@ -15,7 +15,7 @@ export default function newRecipeStep2({user, setStep, recipe}) {
         <AddImgForm recipe={recipe} />
       </div>
       <Link to={`/recipes/${recipe._id}`}>
-        <button>Save Recipe</button>
+        <button class="save-btn">Save Recipe</button>
       </Link>
     </div>
   );

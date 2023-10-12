@@ -11,6 +11,7 @@ import RecipeDetailPage from '../RecipeDetailPage/RecipeDetailPage';
 import NutritionDetailPage from '../NutritionDetailPage/NutritionDetailPage';
 import CategoriesDetailPage from '../CategoriesDetailPage/CategoriesDetailPage';
 import RecipesPage from '../RecipesPage/RecipesPage';
+import EditRecipePage from '../../pages/EditRecipePage/EditRecipePage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/recipes" element={<RecipesPage user={user}/>}/>
           <Route path="/recipes/new" element={<NewRecipePage user={user}/>}/>
           <Route path="/recipes/:id" element={<RecipeDetailPage user={user}/>}/>
+          <Route path="/recipes/:id/edit" element={<EditRecipePage user={user}/>}/>
           <Route path="/recipes/:id/nutrition" element={<NutritionDetailPage user={user}/>}/>
 
           <Route path="/*" element={<Navigate to="/recipes" />} />

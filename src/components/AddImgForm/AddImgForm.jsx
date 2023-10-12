@@ -5,20 +5,7 @@ import * as imagesAPI from "../../utilities/images-api"
 import "./AddImgForm.css"
 
 export default function AddImgForm({recipe}) {
-  // const [file, setFile] = useState('');
-  // const [uploaded, setUploaded] = useState(false);
-  // function handleChange(evt) {
-  //   setFile(evt.target.files[0]);
-  // }
-  // async function handleUpload(evt) {
-  //   evt.preventDefault();
-    
-  //   const formData = new FormData();
-  //   formData.append('image', file);
-  //   const newImg = await imagesAPI.addImg(formData, recipe._id);
-  //   setFile('');
-  //   setUploaded(true)
-  // }
+  
   const [image, setImage] = useState('');
   const fileInputRef = useRef();
   
@@ -30,25 +17,18 @@ export default function AddImgForm({recipe}) {
     const formData = new FormData();
     formData.append('image', fileInputRef.current.files[0]);
     const newImage = await imagesAPI.upload(formData, recipe._id);
-    setImage([newImage]);
+    setImage(newImage);
     fileInputRef.current.value = '';
   }
 
   return (
-    // <div>
-    //   <h1>Add Image</h1>
-    //   {uploaded && <p>Image is uploa</p> }
-    //   <form onSubmit={handleUpload} encType="multipart/form-data">
-    //     <label>Upload Image</label>
-    //     <input type="file" name="image" onChange={handleChange} required />
-    //     <button type="submit">Add</button>
-    //     </form>
-    // </div>
-    <div>
+    
+    <div className='AddImageForm'>
       <h1>Add Image</h1>
-        <label>Upload Image</label>
-        <input type="file" ref={fileInputRef} />
-        <button onClick={handleUpload}>Upload</button>
+      <img src={image} class="uploaded-img"></img>
+      <label>Upload Image</label>
+      <input type="file" ref={fileInputRef} />
+      <button onClick={handleUpload} class="add-btn">Upload</button>
     </div>
   );
 }

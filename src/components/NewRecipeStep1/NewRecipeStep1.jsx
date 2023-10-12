@@ -37,18 +37,18 @@ export default function NewRecipeStep1({ setStep, user, setRecipe }) {
     setRecipe(recipe);
     setStep('step2');
   }
+
   return (
     <div className="NewRecipeStep1">
-      <h1>new recipe step1</h1>
       <form onSubmit={handleSubmit}>
         <label>Name</label>
         <input type="text" placeholder="name" name="title" value={newRecipe.title} onChange={handleChange}></input>
         <label>Preparation time (min)</label>
-        <input type="number" placeholder="preparation time" name="prepTime" value={newRecipe.prepTime} onChange={handleChange}></input>
+        <input type="number" placeholder="preparation time" name="prepTime" default="1" value={newRecipe.prepTime} onChange={handleChange}></input>
         <label>Cooking Time (min)</label>
-        <input type="number" placeholder="cooking time" name="cookTime" value={newRecipe.cookTime} onChange={handleChange}></input>
+        <input type="number" placeholder="cooking time" name="cookTime" default="1" value={newRecipe.cookTime} onChange={handleChange}></input>
         <label>Difficulty</label>
-        <select name="difficulty" value={newRecipe.difficulty} onChange={handleChange}>
+        <select name="difficulty" value={newRecipe.difficulty} default="1" onChange={handleChange}>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>

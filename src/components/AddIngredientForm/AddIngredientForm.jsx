@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./AddIngredientForm.css";
 import * as ingredientsAPI from "../../utilities/ingredients-api"
 
 
-export default function AddIngredientForm({recipe}) {
+export default function AddIngredientForm({recipe, isEditing=false}) {
   const [ingredients, setIngredients] = useState([]);
   const [newIngredient, setNewIngredient] = useState({
     name: '',
@@ -11,7 +11,17 @@ export default function AddIngredientForm({recipe}) {
     measure: '',
   });
 
-  const ingredientsList = ingredients.map((ing, idx) => <p>{ing.name} - {ing.qty} {ing.measure}</p>)
+    useEffect(function() {
+      if (isEditing) setIngredients(recipe.ingredients)
+    }, []);
+  
+
+  const ingredientsList = ingredients.map((ing, idx) => (
+    <div class="ingredient-container">
+      <p>{ing.name} - {ing.qty} {ing.measure}</p>
+      <button class="delete-btn" onClick={() => handleDelete(ing._id)}>x</button>
+      </div>
+      ))
 
   function handleChange(evt) {
     setNewIngredient({...newIngredient, [evt.target.name]: evt.target.value});
@@ -30,14 +40,19 @@ export default function AddIngredientForm({recipe}) {
     })
   }
 
+  async function handleDelete(id) {
+    const newIngredients = await ingredientsAPI.deleteIngredient(recipe._id, id);
+    setIngredients(newIngredients);
+  }
+
   return(
     <div className="AddIngredientForm">
       <h1>Ingredients</h1>
-      {ingredients.length ? ingredientsList : "Add ingredients"}
+      {ingredients.length ? ingredientsList : <p>Add ingredients</p>}
       <form onSubmit={handleAddIngredient}> 
         <input type="text" name="name" autoComplete="off" value={newIngredient.name} placeholder="name" onChange={handleChange}></input>
         <input type="text" name="qty" value={newIngredient.qty} placeholder="quantity" onChange={handleChange}></input>
-        <select name="measure" value={newIngredient.measure} onChange={handleChange} >
+        <select name="measure" value={newIngredient.measure} default="cup" onChange={handleChange} >
           <option value="tsp">teaspoon</option>
           <option value="tbsp">tablespoon</option>
           <option value="cup">cup</option>
@@ -46,7 +61,7 @@ export default function AddIngredientForm({recipe}) {
           <option value="g">grams</option>
           <option value="kg">kilograms</option>
         </select>
-        <button type="submit">Add</button>
+        <button type="submit" class="add-btn">Add</button>
       </form>
       
     </div>

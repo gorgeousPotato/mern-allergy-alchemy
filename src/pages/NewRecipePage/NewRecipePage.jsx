@@ -1,6 +1,7 @@
 import { useState } from "react";
 import NewRecipeStep1 from "../../components/NewRecipeStep1/NewRecipeStep1";
 import NewRecipeStep2 from "../../components/NewRecipeStep2/NewRecipeStep2";
+import "./NewRecipePage.css"
 
 export default function NewRecipePage({user}) {
   const [step, setStep] = useState('step1');

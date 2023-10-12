@@ -36,6 +36,7 @@ const ingredientSchema = new Schema(
     },
     measure: {
       type: String,
+      default: "cup",
     },
     recipe: {
       type: Schema.Types.ObjectId,

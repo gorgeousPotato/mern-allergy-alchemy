@@ -1,6 +1,24 @@
 .NewRecipeStep2 .flex-col {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.NewRecipeStep2 .save-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 100px;
+  background-color: var(--blue);
+  color: var(--text-primary);
+  margin-top: 1rem;
+}
+
+.NewRecipeStep2 .save-btn:hover {
+  color: white;
+  background-color: var(--tertiary);
+}
+
+.NewRecipeStep2{
+  text-align: right;
 }
