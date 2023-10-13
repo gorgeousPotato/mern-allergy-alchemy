@@ -21,6 +21,7 @@ export default function NavBar({ user, setUser }) {
         <Link to="/categories">Browse Recipes</Link>
         <Link to="/recipes">Personalised Recipes</Link>
         <Link to="/recipes/new">Add a Recipe</Link>
+        <Link to="/items">Shopping List</Link>
         <Link to="" onClick={ handleLogout }>Log Out</Link>
       </div>
       <h3>{welcomeMsg}, {user.name}</h3>

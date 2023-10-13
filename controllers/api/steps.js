@@ -3,6 +3,7 @@ const Recipe = require('../../models/recipe');
 module.exports = {
   create,
   delete: deleteStep,
+  update,
 }
 
 async function create(req,res) {
@@ -25,4 +26,13 @@ async function deleteStep(req,res) {
     console.log(err);
   };
   res.json(recipe.steps)
+}
+
+async function update(req,res) {
+  const recipe = await Recipe.findById(req.params.id1);
+  Recipe.updateOne(
+    {_id: req.params.id1, 'steps._id': req.params.id2},
+    {$set: {'steps.$.name': req.body.name}},
+    res.json(recipe.steps)
+  )
 }

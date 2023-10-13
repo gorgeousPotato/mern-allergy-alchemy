@@ -8,3 +8,7 @@ export function addStep(recipeId, newStep) {
 export function deleteStep(recipeId, stepId) {
   return sendRequest(`${BASE_URL}/${recipeId}/steps/${stepId}`, 'DELETE');
 }
+
+export function updateStep(recipeId, stepId, newStep) {
+  return sendRequest(`${BASE_URL}/${recipeId}/steps/${stepId}`, 'PUT');
+}

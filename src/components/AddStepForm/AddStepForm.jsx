@@ -9,10 +9,6 @@ export default function AddStepForm({recipe, isEditing=false}) {
     name: '',
   });
 
-  useEffect(function() {
-    if (isEditing) setSteps(recipe.steps);
-  }, []);
-
   const stepsList = steps.map((step, idx) => (
   <div className="step-container">
     <p>{step.name}</p>
@@ -39,6 +35,7 @@ export default function AddStepForm({recipe, isEditing=false}) {
     setSteps(newSteps);
   }
 
+  
   return(
     <div className="AddStepForm">
       <h1>Steps</h1>

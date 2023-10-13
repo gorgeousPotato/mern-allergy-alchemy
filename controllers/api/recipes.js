@@ -7,6 +7,7 @@ module.exports = {
   create,
   show,
   index,
+  edit,
 }
 
 async function index(req, res) {
@@ -38,6 +39,11 @@ async function create(req,res) {
 }
 
 async function show(req,res) {
+  const recipe = await Recipe.findById(req.params.id).populate('user', 'name');
+  res.json(recipe);
+}
+
+async function edit(req,res) {
   const recipe = await Recipe.findById(req.params.id).populate('user', 'name');
   res.json(recipe);
 }

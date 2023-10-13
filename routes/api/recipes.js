@@ -10,6 +10,9 @@ router.get('/', recipesCtrl.index);
 //GET /api/recipes/new
 router.get('/new', recipesCtrl.new);
 
+//GET /api/recipes/:id/edit
+router.get('/edit', recipesCtrl.edit);
+
 //GET /api/recipes/:id
 router.get('/:id', recipesCtrl.show)
 

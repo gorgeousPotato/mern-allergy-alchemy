@@ -11,10 +11,6 @@ export default function AddIngredientForm({recipe, isEditing=false}) {
     measure: '',
   });
 
-    useEffect(function() {
-      if (isEditing) setIngredients(recipe.ingredients)
-    }, []);
-  
 
   const ingredientsList = ingredients.map((ing, idx) => (
     <div class="ingredient-container">

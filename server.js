@@ -32,6 +32,7 @@ app.use('/api/recipes', require('./routes/api/ingredients'));
 app.use('/api/recipes', require('./routes/api/steps'));
 app.use('/api/recipes', require('./routes/api/images'));
 app.use('/api/recipes', require('./routes/api/nutrition'));
+app.use('/api/items', require('./routes/api/items'));
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX/API requests

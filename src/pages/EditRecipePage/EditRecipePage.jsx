@@ -10,12 +10,12 @@ export default function NewRecipePage({user}) {
   const { id } = useParams();
 
   useEffect(function() {
-    async function getRecipe(idx) {
-      const recipe = await await recipeAPI.getRecipe(id);
+    async function getRecipe(id) {
+      const recipe = await recipeAPI.editRecipe(id);
       setRecipe(recipe);
     }
     getRecipe(id)
-  }, []);
+  }, [id]);
   
   const isEditing = true;
 

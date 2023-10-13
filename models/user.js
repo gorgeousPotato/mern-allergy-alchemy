@@ -13,6 +13,15 @@ const allergySchema = new Schema({
   },
 })
 
+const itemSchema = new Schema({
+  item: {type: String},
+  // user: {
+  //   type: Schema.Types.ObjectId,
+  //   ref: "User",
+  //   required: true,
+  // },
+})
+
 const userSchema = new Schema({
 name: {type: String, required: true},
 email: {
@@ -27,7 +36,8 @@ password: {
   minLength: 3,
   required: true,
 },
-allergies: [allergySchema]
+allergies: [allergySchema],
+items: [itemSchema], 
 }, {
   timestamps: true,
   // Even though it's hashed - don't serialize the password

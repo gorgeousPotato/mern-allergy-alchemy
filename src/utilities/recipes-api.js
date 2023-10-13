@@ -13,6 +13,10 @@ export function getRecipe(recipeId) {
   return sendRequest(`${BASE_URL}/${recipeId}`);
 }
 
+export function editRecipe(recipeId) {
+  return sendRequest(`${BASE_URL}/${recipeId}/edit`);
+}
+
 export function getRecipesAllergy() {
   return sendRequest(BASE_URL);
 }

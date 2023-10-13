@@ -10,4 +10,7 @@ router.post('/:id/steps', stepsCtrl.create);
 //DELETE /api/recipes/:id1/steps/:id2
 router.delete('/:id1/steps/:id2', stepsCtrl.delete);
 
+//DELETE /api/recipes/:id1/steps/:id2
+router.put('/:id1/steps/:id2', stepsCtrl.update);
+
 module.exports = router;

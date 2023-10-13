@@ -1,0 +1,30 @@
+.IngredientsCard {
+  grid-column: 2/3;
+  grid-row: 1/4;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.IngredientsCard .ingredient-container {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.IngredientsCard .add-btn{
+  padding: .3rem 1rem;
+  border: none;
+  border-radius: 100px;
+  background-color: var(--blue);
+  color: var(--text-primary)
+}
+
+.IngredientsCard .add-btn:hover{
+  color: white;
+  background-color: var(--tertiary);
+}

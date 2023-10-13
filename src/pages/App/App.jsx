@@ -12,6 +12,7 @@ import NutritionDetailPage from '../NutritionDetailPage/NutritionDetailPage';
 import CategoriesDetailPage from '../CategoriesDetailPage/CategoriesDetailPage';
 import RecipesPage from '../RecipesPage/RecipesPage';
 import EditRecipePage from '../../pages/EditRecipePage/EditRecipePage';
+import ItemsPage from '../ItemsPage/ItemsPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/recipes/:id" element={<RecipeDetailPage user={user}/>}/>
           <Route path="/recipes/:id/edit" element={<EditRecipePage user={user}/>}/>
           <Route path="/recipes/:id/nutrition" element={<NutritionDetailPage user={user}/>}/>
+          <Route path="/items" element={<ItemsPage user={user}/>}/>
 
           <Route path="/*" element={<Navigate to="/recipes" />} />
         </Routes>
