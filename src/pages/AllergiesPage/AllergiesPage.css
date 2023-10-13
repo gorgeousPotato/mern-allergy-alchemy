@@ -36,3 +36,18 @@
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .AllergiesPage {
+    width: 100%;
+  }
+
+  .AllergiesPage .allergens-container {
+    flex-direction: column;
+  }
+
+  .AllergiesPage .allergen {
+    width: 80vw;
+  }
+
+} 
+

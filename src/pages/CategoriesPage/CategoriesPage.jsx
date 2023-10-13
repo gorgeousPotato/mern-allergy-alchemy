@@ -15,7 +15,7 @@ export default function CategoriesPage({user}) {
     getCategories();
   }, []);
   const categoriesList = categories.map((cat, idx) => (
-    <Link to={`/categories/${cat._id}`}>
+    <Link to={`/categories/${cat.title}`}>
       <div className="category" style={{backgroundImage: `url(${cat.img})`, backgroundSize: 'cover', backgroundPosition: 'center center'}}>
         <div className="text-container"><h3>{cat.title}</h3></div>
       </div>

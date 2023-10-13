@@ -7,3 +7,10 @@
 .RecipesPage h1 {
   text-align: left;
 }
+
+@media (max-width: 768px) {
+  .RecipesPage .recipes-container{
+    display: flex;
+    flex-direction: column;
+  }
+} 

@@ -1,8 +1,10 @@
 .NewAllergyForm input{
   padding: .3rem .3rem;
-  border: 1px solid var(--text-tertiary);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border: none;
   border-radius: 100px;
   margin-right: .5rem;
+  font-size: 1.2rem;
 }
 
 
@@ -11,10 +13,30 @@
   border: none;
   border-radius: 100px;
   background-color: var(--blue);
-  color: var(--text-primary)
+  color: var(--text-primary);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border: none;
+  font-size: 1.2rem;
 }
 
 .NewAllergyForm button:hover{
   color: white;
   background-color: var(--tertiary);
 }
+
+@media (max-width: 768px) {
+  .NewAllergyForm {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .NewAllergyForm input {
+    font-size: 1.4rem;
+  }
+
+  .NewAllergyForm button {
+    font-size: 1.4rem;
+  }
+
+} 

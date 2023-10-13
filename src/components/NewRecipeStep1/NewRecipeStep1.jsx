@@ -42,13 +42,13 @@ export default function NewRecipeStep1({ setStep, user, setRecipe }) {
     <div className="NewRecipeStep1">
       <form onSubmit={handleSubmit}>
         <label>Name</label>
-        <input type="text" placeholder="name" name="title" value={newRecipe.title} onChange={handleChange}></input>
-        <label>Preparation time (min)</label>
-        <input type="number" placeholder="preparation time" name="prepTime" default="1" value={newRecipe.prepTime} onChange={handleChange}></input>
+        <input className="inp-shadow" type="text" placeholder="name" name="title" value={newRecipe.title} onChange={handleChange}></input>
+        <label>Prep. time (min)</label>
+        <input className="inp-shadow" type="number" placeholder="preparation time" name="prepTime" default="1" value={newRecipe.prepTime} onChange={handleChange}></input>
         <label>Cooking Time (min)</label>
-        <input type="number" placeholder="cooking time" name="cookTime" default="1" value={newRecipe.cookTime} onChange={handleChange}></input>
+        <input className="inp-shadow" type="number" placeholder="cooking time" name="cookTime" default="1" value={newRecipe.cookTime} onChange={handleChange}></input>
         <label>Difficulty</label>
-        <select name="difficulty" value={newRecipe.difficulty} default="1" onChange={handleChange}>
+        <select className="inp-shadow" name="difficulty" value={newRecipe.difficulty} default="1" onChange={handleChange}>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -56,7 +56,7 @@ export default function NewRecipeStep1({ setStep, user, setRecipe }) {
           <option value="5">5</option>
         </select>
         <label>Category</label>
-        <select name="category" value={newRecipe.category} onChange={handleChange}>
+        <select className="inp-shadow" name="category" value={newRecipe.category} onChange={handleChange}>
           {categoryOptions}
         </select>
         <label>Gluten Free</label>

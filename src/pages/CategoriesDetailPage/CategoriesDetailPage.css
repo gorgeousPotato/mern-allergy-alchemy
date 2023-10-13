@@ -7,3 +7,10 @@
 .CategoriesDetailPage h1 {
   text-align: left;
 }
+
+@media (max-width: 768px) {
+  .CategoriesDetailPage .recipes-container{
+    display: flex;
+    flex-direction: column;
+  }
+} 

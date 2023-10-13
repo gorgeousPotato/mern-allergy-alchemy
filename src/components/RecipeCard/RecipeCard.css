@@ -23,3 +23,11 @@
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   border-radius: 1rem;
 }
+
+@media (max-width: 768px) {
+  .RecipeCard .recipe-card{
+    height: 22vh;
+    width: 80vw;
+    border-radius: 1rem;
+  }
+} 

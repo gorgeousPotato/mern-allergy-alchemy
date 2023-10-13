@@ -14,6 +14,8 @@
 .AuthPage .authPageContainer {
   display: flex;
   flex-direction: column;
+  align-items:flex-start;
+  padding-left: 4rem;
 }
 
 .AuthPage .img-container {
@@ -44,4 +46,29 @@
   border: none;
   margin-left: .5rem;
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+
+  .AuthPage {
+    justify-content: flex-start;
+  }
+  .img-container {
+    width: 0%;
+    background-color: var(--primary);
+  }
+
+  .AuthPage h1 {
+    display: none;
+  }
+
+  .AuthPage .authPageContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+    padding: 0 2rem;
+  }
 }

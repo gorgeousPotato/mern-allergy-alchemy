@@ -20,7 +20,7 @@ export default function CategoriesDetailPage() {
 
   return (
     <div className="CategoriesDetailPage">
-      <h1>Categories Detail Page</h1>
+      <h1>{id}</h1>
       <div className="recipes-container">
         {recipesCards}
       </div>

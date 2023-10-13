@@ -18,7 +18,8 @@
 .SignUpForm input,
 .SignUpForm select{
   padding: .3rem .3rem;
-  border: 1px solid var(--text-tertiary);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border: none;
   border-radius: 100px;
   margin-right: .5rem;
 }
@@ -30,9 +31,23 @@
   background-color: var(--blue);
   color: var(--text-primary);
   grid-column: 1/3;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .SignUpForm button:hover{
   color: white;
   background-color: var(--tertiary);
+}
+
+@media (max-width: 768px) {
+  .SignUpForm .form-container{
+    width: 100vw;
+    margin: 0 1rem;
+  }
+
+  .SignUpForm h3 {
+    text-align: left;
+    margin-right: 1rem;
+    width:70%;
+  }
 }

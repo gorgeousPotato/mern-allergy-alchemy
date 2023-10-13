@@ -13,7 +13,11 @@ async function index(req,res) {
 
 
 async function show(req,res) {
-  const recipes = await Recipe.find({category: req.params.id}).exec();
+  console.log(req.params.id);
+  const category = await Category.findOne({title: req.params.id});
+  console.log(category);
+  const id = category._id;
+  const recipes = await Recipe.find({category: id}).exec();
   res.json(recipes);
 }
 

@@ -98,4 +98,11 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+@media (max-width: 768px) {
+  .RecipeDetailPage .container {
+    display: flex;
+    flex-direction: column;
+  }
+} 
+
 

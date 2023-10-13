@@ -34,3 +34,17 @@
 .items-container p {
   margin: .2rem;
 }
+
+@media (max-width: 768px) {
+  .ItemsPage .items-container {
+    width: 90vw;
+  }
+  .ItemsPage {
+    width: 90vw;
+  }
+
+  .ItemsPage .delete-all-btn {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+} 
