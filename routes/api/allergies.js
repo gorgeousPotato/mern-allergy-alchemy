@@ -4,12 +4,12 @@ const allergiesCtrl = require('../../controllers/api/allergies');
 const ensureLoggedIn = require('../../config/ensureLoggedIn')
 
 //GET /api/allergies
-router.get('/', allergiesCtrl.index);
+router.get('/', ensureLoggedIn, allergiesCtrl.index);
 
 //POST /api/allergies
-router.post('/', allergiesCtrl.create);
+router.post('/', ensureLoggedIn, allergiesCtrl.create);
 
 //DELETE /api/allergies/:id
-router.delete('/:id', allergiesCtrl.delete);
+router.delete('/:id', ensureLoggedIn, allergiesCtrl.delete);
 
 module.exports = router;

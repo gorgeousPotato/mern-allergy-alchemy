@@ -1,0 +1,17 @@
+.NutritionDetailPage {
+  text-align: left;
+}
+
+.NutritionDetailPage td {
+  padding: 0.5rem 1rem;
+}
+
+.NutritionDetailPage thead {
+  font-weight: bold;
+}
+
+.NutritionDetailPage table {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }

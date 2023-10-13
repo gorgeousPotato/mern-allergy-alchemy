@@ -8,16 +8,16 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn')
 router.get('/', recipesCtrl.index);
 
 //GET /api/recipes/new
-router.get('/new', recipesCtrl.new);
+router.get('/new', ensureLoggedIn, recipesCtrl.new);
 
 //GET /api/recipes/:id/edit
-router.get('/edit', recipesCtrl.edit);
+router.get('/edit', ensureLoggedIn, recipesCtrl.edit);
 
 //GET /api/recipes/:id
 router.get('/:id', recipesCtrl.show)
 
 //POST /api/recipes
-router.post('/', recipesCtrl.create);
+router.post('/', ensureLoggedIn, recipesCtrl.create);
 
 
 

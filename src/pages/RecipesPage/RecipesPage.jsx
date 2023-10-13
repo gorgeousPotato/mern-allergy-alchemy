@@ -21,7 +21,9 @@ export default function RecipesPage() {
   return (
     <div className="RecipesPage">
       <h1>Recipes that don't contain your allergens</h1>
-      {recipesCards}
+      <div className="recipes-container">
+        {recipesCards}
+      </div>
     </div>
   );
 }

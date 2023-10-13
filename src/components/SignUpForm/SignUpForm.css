@@ -2,8 +2,37 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  width: 60%;
+  text-align: left;
+  margin-top: 5vh;
 }
 
-.SignUpForm button {
+/* .SignUpForm button {
   grid-column: 1/3;
+} */
+.SignUpForm h3 {
+  text-align: left;
+}
+
+
+.SignUpForm input,
+.SignUpForm select{
+  padding: .3rem .3rem;
+  border: 1px solid var(--text-tertiary);
+  border-radius: 100px;
+  margin-right: .5rem;
+}
+
+.SignUpForm button{
+  padding: .3rem 1rem;
+  border: none;
+  border-radius: 100px;
+  background-color: var(--blue);
+  color: var(--text-primary);
+  grid-column: 1/3;
+}
+
+.SignUpForm button:hover{
+  color: white;
+  background-color: var(--tertiary);
 }

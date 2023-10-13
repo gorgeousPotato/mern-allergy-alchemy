@@ -13,12 +13,22 @@ export default function ItemsPage({user}) {
     getItems();
   }, []);
 
-  const itemsList = items.map((item, idx) => (<h5>{item.item}</h5>))
+  async function handleDelete() {
+    await itemsAPI.deleteAll();
+    setItems([]);
+  }
+
+  const itemsList = items.map((item, idx) => (<p>{item.item}</p>))
 
   return (
     <div className="ItemsPage">
-      <h1>Dear {user.name} here is your shopping list:</h1>
-      {itemsList}
+      <div>
+        <h1>Dear {user.name} here is your shopping list:</h1>
+        <div className="items-container">
+          {itemsList.length ? itemsList : <p>Nothing here yet</p>}
+        </div>
+      </div>
+      <button onClick={handleDelete} className="delete-all-btn">Clean the shopping list</button>
     </div>
   );
 }

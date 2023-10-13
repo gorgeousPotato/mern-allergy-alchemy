@@ -19,9 +19,11 @@ export default function CategoriesDetailPage() {
   const recipesCards = recipes.map((rec, idx) => <RecipeCard recipe={rec} key={idx} />)
 
   return (
-    <div>
+    <div className="CategoriesDetailPage">
       <h1>Categories Detail Page</h1>
-      {recipesCards}
+      <div className="recipes-container">
+        {recipesCards}
+      </div>
     </div>
   );
 }

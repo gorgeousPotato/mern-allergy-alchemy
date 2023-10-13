@@ -1,0 +1,9 @@
+.RecipesPage .recipes-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.RecipesPage h1 {
+  text-align: left;
+}

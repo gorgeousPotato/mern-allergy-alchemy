@@ -2,8 +2,35 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  width: 60%;
+  text-align: left;
+  margin-top: 5vh;
 }
 
 .LoginForm button {
   grid-column: 1/3;
+  padding: .3rem 1rem;
+  border: none;
+  border-radius: 100px;
+  background-color: var(--blue);
+  color: var(--text-primary);
+  grid-column: 1/3;
 }
+
+.LoginForm button:hover {
+  color: white;
+  background-color: var(--tertiary);
+}
+
+.LoginForm h3 {
+  text-align: left;
+}
+
+.LoginForm input,
+.LoginForm select{
+  padding: .3rem .3rem;
+  border: 1px solid var(--text-tertiary);
+  border-radius: 100px;
+  margin-right: .5rem;
+}
+

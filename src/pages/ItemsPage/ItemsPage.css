@@ -1,0 +1,36 @@
+.ItemsPage {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 65vh;
+}
+
+.ItemsPage .delete-all-btn {
+  padding: .3rem 1rem;
+  width: 30%;
+  border: none;
+  border-radius: 100px;
+  background-color: var(--blue);
+  color: var(--text-primary);
+}
+
+
+.ItemsPage .delete-all-btn:hover{
+  color: white;
+  background-color: var(--tertiary);
+}
+
+.ItemsPage .items-container {
+  background-color: white;
+  width: 30vw;
+  padding: .5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Nanum Brush Script';
+  font-size: 2rem;
+}
+
+.items-container p {
+  margin: .2rem;
+}

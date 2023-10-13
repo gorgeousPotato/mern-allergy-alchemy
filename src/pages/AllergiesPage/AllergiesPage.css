@@ -3,22 +3,25 @@
   flex-direction: column;
   width: 50%;
   text-align: left;
+  
 }
 
 .AllergiesPage .allergen {
-  background-color: var(--tertiary);
-  color: white;
-  border-radius: 100px;
+  background-color: white;
+  color: var(--text-primary);
   width: 20vw;
   margin: 1rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem 0 3rem;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 1.4rem;
 }
 
 .AllergiesPage .allergen button {
-  border: none;
+  border: 1px solid var(--text-secondary);
   background-color: white;
   margin-left: 3vw;
   border-radius: 100px;

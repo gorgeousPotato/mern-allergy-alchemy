@@ -5,10 +5,13 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn')
 
 
 //POST /api/items
-router.post('/', itemsCtrl.create);
+router.post('/', ensureLoggedIn, itemsCtrl.create);
 
 //GET /api/items
-router.get('/', itemsCtrl.index);
+router.get('/', ensureLoggedIn, itemsCtrl.index);
+
+//DELETE /api/items
+router.delete('/', ensureLoggedIn, itemsCtrl.delete);
 
 
 module.exports = router;

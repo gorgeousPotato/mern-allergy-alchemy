@@ -30,6 +30,7 @@ export default function LoginForm({ setUser }) {
 
   return (
     <div className='LoginForm'>
+      <h3>Login to start your allergy-free journey</h3>
       <div className="form-container">
         <form autoComplete="off" onSubmit={handleSubmit}>
           <label>Email</label>

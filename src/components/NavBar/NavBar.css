@@ -1,3 +1,10 @@
+.NavBar {
+  position: sticky;
+  top: 0;
+  background-color: var(--primary);
+}
+
+
 .NavBar .navbar-container{
   display: flex;
   justify-content: flex-end;
@@ -30,3 +37,31 @@
   color: var(--secondary);
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 3px 0;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .navbar-links {
+      display: none;
+      flex-direction: column;
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
+
+  .hamburger {
+      display: flex;
+  }
+}

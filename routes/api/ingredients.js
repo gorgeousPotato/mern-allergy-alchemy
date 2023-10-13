@@ -5,9 +5,9 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn')
 
 
 //POST /api/recipes/:id/ingredients
-router.post('/:id/ingredients', ingredientsCtrl.create);
+router.post('/:id/ingredients', ensureLoggedIn, ingredientsCtrl.create);
 
 //POST /api/recipes/:id/ingredients/:id
-router.delete('/:id1/ingredients/:id2', ingredientsCtrl.delete);
+router.delete('/:id1/ingredients/:id2', ensureLoggedIn, ingredientsCtrl.delete);
 
 module.exports = router;

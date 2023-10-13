@@ -18,9 +18,7 @@ async function show(req,res) {
       "title": recipe.title,
       "ingr": ingrArr,
     }
-    console.log(recipeData);
     const nutritionData = await fetchNutritionData(recipeData);
-    console.log(nutritionData);
     res.json(nutritionData);
   } catch(error) {
     console.error('Error fetching nutrition data:', error);

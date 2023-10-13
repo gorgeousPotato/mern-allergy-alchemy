@@ -6,6 +6,10 @@ export function addItem(items) {
 }
 
 export function getAll() {
-    return sendRequest(BASE_URL);
+  return sendRequest(BASE_URL);
+}
+
+export function deleteAll() {
+  return sendRequest(BASE_URL, 'DELETE')
 }
 
