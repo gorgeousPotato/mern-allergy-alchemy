@@ -25,7 +25,7 @@ export default function ItemsPage({user}) {
       <div>
         <h1>Dear {user.name} here is your shopping list:</h1>
         <div className="items-container">
-          {itemsList.length ? itemsList : <p>Nothing here yet</p>}
+          {itemsList.length ? itemsList : <p>Your shopping list is empty</p>}
         </div>
       </div>
       <button onClick={handleDelete} className="delete-all-btn">Clean the shopping list</button>

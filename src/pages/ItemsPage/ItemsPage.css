@@ -13,6 +13,7 @@
   border-radius: 100px;
   background-color: var(--blue);
   color: var(--text-primary);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -27,8 +28,7 @@
   padding: .5rem 2rem;
   border-radius: 1rem;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  font-family: 'Nanum Brush Script';
-  font-size: 2rem;
+ 
 }
 
 .items-container p {

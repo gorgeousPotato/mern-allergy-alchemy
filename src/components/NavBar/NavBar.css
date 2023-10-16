@@ -37,6 +37,10 @@
   color: var(--secondary);
 }
 
+.NavBar a:focus {
+  color: var(--tertiary);
+}
+
 .navbar-links {
   display: flex;
   justify-content: flex-end;
