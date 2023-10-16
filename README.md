@@ -46,7 +46,7 @@ ALLERGY ALCHEMY is designed to empower individuals with food allergies, offering
 ![alt text](https://github.com/gorgeousPotato/mern-allergy-alchemy/blob/main/screenshots/9.png "New Recipe - 2")
 
 10. Simply click the "Save" button and allow others to savor the delicious appearance of your recipe.
-![alt text](https://github.com/gorgeousPotato/mern-allergy-alchemy/blob/main/screenshots/10.png "Ready")
+![alt text](https://github.com/gorgeousPotato/mern-allergy-alchemy/blob/main/screenshots/10..png "Ready")
 
 11. Here is the shopping list of the ingredients you selected and sent.
 ![alt text](https://github.com/gorgeousPotato/mern-allergy-alchemy/blob/main/screenshots/11.png "Shopping list")
