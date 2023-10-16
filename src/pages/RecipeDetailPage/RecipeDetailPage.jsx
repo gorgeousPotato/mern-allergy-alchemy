@@ -32,7 +32,6 @@ export default function RecipeDetailPage({user}) {
     getRecipe(id)
   }, []);
 
-  // const ingredientsList = rec.ingredients.map((ing, idx) => <li>{ing.name} - {ing.qty} {ing.measure}</li>)
   const stepsList = rec.steps.map((step, idx) => <li>{step.name}</li>)
   let star = ''
   for (let i=1; i<= rec.difficulty; i++) {
@@ -43,7 +42,6 @@ export default function RecipeDetailPage({user}) {
     <div className="RecipeDetailPage">
       <div className="title-container">
         <h1>{rec.title}</h1>
-        {/* {rec.user._id === user._id && <Link to={`/recipes/${rec._id}/edit`}><button className="edit-btn">Edit</button></Link>} */}
       </div>
       <div className="container">
         <div className="main card" style={{backgroundImage: `url(${rec.img})`, backgroundSize: 'cover', backgroundPosition: 'center center'}}>
@@ -68,12 +66,6 @@ export default function RecipeDetailPage({user}) {
           </div>
         </div>
         <IngredientsCard rec={rec} user={user} />
-        {/* <div className="ingredients card">
-          <h3>Ingredients:</h3>
-          <ul>
-            {ingredientsList}
-          </ul>
-        </div> */}
         <div className="method card">
           <h3>Method:</h3>
           <ul>

@@ -12,14 +12,13 @@ module.exports = {
 
 async function index(req, res) {
   const allRecipes = await Recipe.find({}).populate('ingredients');
-  const ing = allRecipes.map(rec => rec.ingredients);
   const user = await User.findById(req.user._id);
   const allergies = user.allergies;
-  const allergiesArr = allergies.map(aller => aller.ingredient);
+  const allergiesArr = allergies.map(aller => aller.ingredient.toLocaleLowerCase());
   recipesArr = [];
   allRecipes.map(rec => {
     let isOkay = true;
-    rec.ingredients.map(ing => {if (allergiesArr.includes(ing.name)) isOkay=false} );
+    rec.ingredients.map(ing => {if (allergiesArr.includes(ing.name.toLowerCase())) isOkay=false} );
     if (isOkay) recipesArr.push(rec)
   })
 res.json(recipesArr);
